@@ -1,0 +1,32 @@
+{
+  "name": "eot",
+  "version": "1.0.0",
+  "description": "E.O.T (Endfield Overlay Tool) - Transparent image overlay for Arknights: Endfield",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "set CSC_IDENTITY_AUTO_DISCOVERY=false && electron-builder --win --config.win.signAndEditExecutable=false",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["endfield", "arknights", "overlay", "electron", "transparent"],
+  "author": "이루릴a <leona.8904@gmail.com> (https://github.com/Leo-open-project)",
+  "license": "GPL-3.0",
+  "type": "commonjs",
+  "build": {
+    "appId": "com.endfield.eot",
+    "productName": "E.O.T",
+    "win": {
+      "target": "portable"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer.js",
+      "index.html"
+    ]
+  },
+  "devDependencies": {
+    "electron": "^40.4.0",
+    "electron-builder": "^26.7.0"
+  }
+}
